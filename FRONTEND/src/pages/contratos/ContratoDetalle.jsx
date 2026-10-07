@@ -18,7 +18,7 @@ export default function ContratoDetalle() {
     setItem(data);
   };
   useEffect(() => {
-    load();
+    load().catch((error) => console.error("Error al cargar contrato:", error));
   }, [id]); // eslint-disable-line
 
   const onDelete = async () => {
